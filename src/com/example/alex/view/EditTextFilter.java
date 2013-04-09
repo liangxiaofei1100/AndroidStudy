@@ -1,6 +1,5 @@
 package com.example.alex.view;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -28,7 +27,6 @@ public class EditTextFilter extends Activity {
 		private Toast mExceedMessageSizeToast;
 		private int mMaxLength;
 
-		@SuppressLint("ShowToast")
 		public EditTextLengthFilter(int maxLength, Context context) {
 			mMaxLength = maxLength;
 			mExceedMessageSizeToast = Toast.makeText(context, "Size litmited: "
