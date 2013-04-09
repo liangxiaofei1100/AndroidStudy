@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">alex</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Alex</string>
+	<string name="button_commit_command">发送命令</string>
+</resources>

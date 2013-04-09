@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ImageTextButton">
+        <attr name="text" format="string" />
+        <attr name="image" format="reference" />
+        <attr name="imageSelected" format="reference" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textColorSelected" format="color" />
+    </declare-styleable>
+
+</resources>

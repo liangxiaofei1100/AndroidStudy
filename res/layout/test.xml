@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ignoreGravity="@+id/icon"
+    android:gravity="center_vertical"
+    android:paddingLeft="5dip">
+
+	<LinearLayout
+		android:id="@+id/left"
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:gravity="center_vertical"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentLeft="true">
+	    
+		<TextView android:id="@+id/symbol"
+	        android:textSize="14sp"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:typeface="normal"
+	        android:paddingLeft="4dip"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:layout_gravity="center_vertical"
+	        android:visibility="gone" />
+	        
+	    <TextView android:id="@+id/city"
+	        android:textSize="18sp"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:typeface="normal"
+	        android:paddingLeft="4dip"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:layout_gravity="center_vertical"
+	        android:ellipsize="end" 
+	        android:text="ampm"/>
+	
+	    <!-- The height is set to half the height of the parent, which is 64 dip -->
+	    <TextView android:id="@+id/date"
+	    	android:textSize="14sp"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:typeface="normal"
+	        android:paddingLeft="4dip"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true" 
+	        android:layout_gravity="center_vertical"
+	        android:text="ampm"/>
+    </LinearLayout>
+
+	<RelativeLayout android:id="@+id/daynight"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"	    
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:gravity="center"
+	    android:paddingLeft="1dip"
+	    android:layout_marginRight="3dip">
+	    
+	    <TextView android:id="@+id/time"
+	        android:textSize="32sp"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:typeface="normal"
+	        android:paddingLeft="4dip"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:gravity="center_vertical" 
+	        android:text="ampm"/>
+	        
+	    <TextView android:id="@+id/ampm"
+	        android:textSize="14sp"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:typeface="normal"
+	        android:paddingLeft="1dip"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:layout_toRightOf="@+id/time"
+	        android:text="ampm" 
+	        android:paddingRight="21dip"/>
+	        
+	    <TextView android:id="@+id/week"
+	        android:textSize="14sp"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:typeface="normal"
+	        android:paddingLeft="1dip"
+	        android:paddingRight="21dip"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:layout_toRightOf="@+id/time"
+	        android:layout_below="@+id/ampm"
+	        android:text="ampm" />
+	        
+    </RelativeLayout>
+</RelativeLayout>

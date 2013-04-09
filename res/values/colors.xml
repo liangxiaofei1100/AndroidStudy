@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="unfocused">#cccccccc</color>
+    <color name="pressed">#fff22fff</color>
+    <color name="selected">#660099cc</color>
+    <color name="focused">#ffff44ff</color>
+    <color name="normal">#ffffffff</color>
+    <color name="diver">#ffcdcdcd</color>
+
+    <color name="image_text_button_unselected">#999999</color>
+    <color name="image_text_button_selected">#ffffff</color>
+</resources>

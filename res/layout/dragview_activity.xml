@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewgroup_drag_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffcdcdcd" >
+
+    <Button
+        android1:id="@+id/btn_create_drag_view"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentLeft="true"
+        android1:layout_alignParentTop="true"
+        android1:text="Button" />
+
+</RelativeLayout>

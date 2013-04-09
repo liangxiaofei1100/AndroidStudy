@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/edittext_phone_number_mms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Input phone number"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/edittext_message_mms"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_below="@id/edittext_phone_number_mms"
+        android:layout_marginBottom="2dip"
+        android:layout_marginTop="2dip"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Input message"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btn_send_mms"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/edittext_message_mms"
+        android:layout_marginBottom="2dip"
+        android:layout_marginTop="2dip"
+        android:text="Send" />
+
+</RelativeLayout>
