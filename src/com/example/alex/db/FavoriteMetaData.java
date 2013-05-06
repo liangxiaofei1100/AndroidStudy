@@ -21,4 +21,16 @@ public class FavoriteMetaData {
 		public static final String CONTENT_TYPE_ITEM = "vnd.android.cursor.item/audio";
 		public static final String AUDIO_ID = "audio_id";
 	}
+	
+	/**
+	 *  Favorite video table
+	 */
+	public static final class Video implements BaseColumns {
+		public static final String TABLE_NAME = "video";
+		public static final Uri CONTENT_URI = Uri
+				.parse("content://" + AUTHORITY + "/video");
+		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/video";
+		public static final String CONTENT_TYPE_ITEM = "vnd.android.cursor.item/video";
+		public static final String AUDIO_ID = "video_id";
+	}
 }

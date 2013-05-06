@@ -4,5 +4,16 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">Alex</string>
-	<string name="button_commit_command">发送命令</string>
+    <string name="button_commit_command">发送命令</string>
+    <string name="viewpager_demo_page1">Page1</string>
+    <string name="viewpager_demo_page2">Page2</string>
+    <string name="viewpager_demo_page3">Page3</string>
+    <string name="crash_toast_text">crash_toast_text</string>
+    <string name="crash_dialog_text">crash_dialog_text</string>
+    <string name="crash_dialog_title">crash_dialog_title</string>
+    <string name="crash_dialog_comment_prompt">crash_dialog_comment_prompt</string>
+    <string name="crash_dialog_ok_toast">crash_dialog_ok_toast</string>
+    <string name="searchLable">Alex search</string>
+    <string name="locale_test">Locale test</string>
+
 </resources>

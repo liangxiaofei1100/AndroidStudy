@@ -7,71 +7,119 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
+import com.example.alex.R;
 import com.example.alex.common.TimeUtil;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class WeatherServiceDemo extends Activity {
-    private static final String LOG_TAG = "WeatherService";
+	private static final String LOG_TAG = "WeatherService";
 
-    // 名空间
-    private static final String NAMESPACE = "http://WebXml.com.cn/";
-    // 网址
-    private static String URL = "http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx";
-    // 方法名
-    private static final String METHOD_NAME = "getWeather";
-    // SOAPACTION
-    private static String SOAP_ACTION = "http://WebXml.com.cn/getWeather";
+	// 名空间
+	private static final String NAMESPACE = "http://WebXml.com.cn/";
+	// 网址
+	private static String URL = "http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx";
+	// 方法名
+	private static final String METHOD_NAME = "getRegionCountry";
+	// SOAPACTION
+	private static String SOAP_ACTION = "http://WebXml.com.cn/getRegionCountry";
 
-    private String weatherToday;
-    private SoapObject detail;
+	private String weatherToday;
+	private SoapObject detail;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+	private TextView mResultTextView;
 
-        getWeather("上海");
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.show_result);
+		mResultTextView = (TextView) findViewById(R.id.tv_show_result);
 
-    public void getWeather(String cityName) {
-        Log.d(LOG_TAG, TimeUtil.getCurrentTime() + ": get weather " + cityName);
-        try {
-            SoapObject rpc = new SoapObject(NAMESPACE, METHOD_NAME);
-            rpc.addProperty("theCityName", cityName);
+		getWeatherAsync();
+	}
 
-            SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+	private final static int MSG_GET_WEATHER_START = 1;
+	private final static int MSG_GET_WEATHER_FINISH = 2;
 
-            envelope.bodyOut = rpc;
-            envelope.dotNet = true;
-            envelope.setOutputSoapObject(rpc);
+	private Handler mHandler = new Handler() {
 
-            HttpTransportSE ht = new HttpTransportSE(URL);
-            ht.debug = true;
-            ht.call(SOAP_ACTION, envelope);
+		@Override
+		public void handleMessage(android.os.Message msg) {
+			switch (msg.what) {
+			case MSG_GET_WEATHER_START:
+				mResultTextView.append("get weather start\n");
+				break;
 
-            Log.d(LOG_TAG, "DUMP>> " + ht.requestDump);
-            Log.d(LOG_TAG, "DUMP<< " + ht.responseDump);
+			case MSG_GET_WEATHER_FINISH:
+				mResultTextView.append("get weather end\n");
+				mResultTextView.append("weather is : " + weatherToday);
+				break;
 
-            SoapObject result = (SoapObject) envelope.bodyIn;
-            detail = (SoapObject) result.getProperty("getWeatherbyCityNameResult");
+			default:
+				break;
+			}
+		};
+	};
 
-            parseWeather(detail);
-            return;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+	private void getWeatherAsync() {
+		Thread thread = new Thread() {
 
-    private void parseWeather(SoapObject detail) throws UnsupportedEncodingException {
-        String date = detail.getProperty(6).toString();
-        weatherToday = "今天：" + date.split(" ")[0];
-        weatherToday = weatherToday + " 天气：" + date.split(" ")[1];
-        weatherToday = weatherToday + " 气温：" + detail.getProperty(5).toString();
-        weatherToday = weatherToday + " 风力：" + detail.getProperty(7).toString() + " ";
-        Log.d(LOG_TAG, TimeUtil.getCurrentTime() + ": weatherToday is " + weatherToday);
-        Toast.makeText(WeatherServiceDemo.this, weatherToday, Toast.LENGTH_LONG).show();
-    }
+			public void run() {
+				mHandler.sendEmptyMessage(MSG_GET_WEATHER_START);
+				getWeather("上海");
+				mHandler.sendEmptyMessage(MSG_GET_WEATHER_FINISH);
+			}
+		};
+		
+		thread.start();
+	}
+
+	public void getWeather(String cityName) {
+		Log.d(LOG_TAG, TimeUtil.getCurrentTime() + ": get weather " + cityName);
+		try {
+			SoapObject rpc = new SoapObject(NAMESPACE, METHOD_NAME);
+			rpc.addProperty("theCityName", cityName);
+
+			SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+					SoapEnvelope.VER11);
+
+			envelope.bodyOut = rpc;
+			envelope.dotNet = true;
+			envelope.setOutputSoapObject(rpc);
+
+			HttpTransportSE ht = new HttpTransportSE(URL);
+			ht.debug = true;
+			ht.call(SOAP_ACTION, envelope);
+
+			Log.d(LOG_TAG, "DUMP>> " + ht.requestDump);
+			Log.d(LOG_TAG, "DUMP<< " + ht.responseDump);
+
+			SoapObject result = (SoapObject) envelope.bodyIn;
+			detail = (SoapObject) result
+					.getProperty("getWeatherbyCityNameResult");
+
+			parseWeather(detail);
+			return;
+		} catch (Exception e) {
+			Log.e(LOG_TAG, "getWeather error: " + e.toString());
+			e.printStackTrace();
+		}
+	}
+
+	private void parseWeather(SoapObject detail)
+			throws UnsupportedEncodingException {
+		String date = detail.getProperty(6).toString();
+		weatherToday = "今天：" + date.split(" ")[0];
+		weatherToday = weatherToday + " 天气：" + date.split(" ")[1];
+		weatherToday = weatherToday + " 气温：" + detail.getProperty(5).toString();
+		weatherToday = weatherToday + " 风力：" + detail.getProperty(7).toString()
+				+ " ";
+		Log.d(LOG_TAG, TimeUtil.getCurrentTime() + ": weatherToday is "
+				+ weatherToday);
+	}
 }

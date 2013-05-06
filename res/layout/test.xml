@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:ignoreGravity="@+id/icon"
     android:gravity="center_vertical"
-    android:paddingLeft="5dip">
+    android:paddingLeft="5dip"
+    android:background="#808080">
 
 	<LinearLayout
 		android:id="@+id/left"

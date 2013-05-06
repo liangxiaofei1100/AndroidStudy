@@ -26,19 +26,29 @@
     <uses-permission android:name="com.android.music.favorite.provider" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
-	<uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:name="com.example.alex.CrashHandleApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.example" >
         <activity
-            android:name=".MainActivity"
+            android:name=".BootActivity"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -408,6 +418,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <!--
         <activity android:name="com.example.libapplication.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -415,19 +426,24 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".activity.TranslateActivity" 
-            android:theme="@style/ThemeActivity">
+        </activity>
+        -->
+        <activity
+            android:name=".activity.TranslateActivity"
+            android:theme="@style/ThemeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TranslateActivity2" android:theme="@style/ThemeActivity"/>
-        <activity android:name=".activity.TranslateActivity3" android:theme="@style/ThemeActivity"/>
-         
-         <activity android:name=".webservice.WeatherServiceDemo" >
+        <activity
+            android:name=".activity.TranslateActivity2"
+            android:theme="@style/ThemeActivity" />
+        <activity
+            android:name=".activity.TranslateActivity3"
+            android:theme="@style/ThemeActivity" />
+        <activity android:name=".webservice.WeatherServiceDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -441,14 +457,100 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-         <activity android:name=".camera.CameraPreviewPixels" >
+        <activity android:name=".camera.CameraPreviewPixels" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>       
-        
+        </activity>
+        <activity android:name=".view.ViewPagerDemo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.ViewPagerFragmentDemo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".camera.FaceDetectDemo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".camera.FaceDetectDemo2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".camera.FaceDetectDemo3" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".camera.FaceDetectDemo4" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".db.MultiQueryDemo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".crash.CrashDialog" />
+        <activity android:name="org.acra.CrashReportDialog" />
+        <activity android:name=".search.SearchActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="MainActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <provider
+            android:name=".search.RecentSearchProvider"
+            android:authorities="com.example.alex.search.RecentSearchProvider" >
+        </provider>
+
+        <receiver android:name=".locale.LocaleResourceUpdater" >
+            <intent-filter>
+                <action android:name="com.android.locale.LocaleResourceUpdater.ACTION_UPDATE_CONTENT_REQUEST" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".locale.LocaleListenerDemo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         
     </application>
 

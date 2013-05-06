@@ -19,7 +19,9 @@ public class FavoriteContentProvider extends ContentProvider {
 
 	public static final int FAVORITE_AUDIO_COLLECTION = 1;
 	public static final int FAVORITE_AUDIO_SINGLE = 2;
-
+	public static final int FAVORITE_VIDEO_COLLECTION = 3;
+	public static final int FAVORITE_VIDEO_SINGLE = 4;
+	
 	public static final UriMatcher uriMatcher;
 
 	static {
@@ -38,8 +40,7 @@ public class FavoriteContentProvider extends ContentProvider {
 
 		@Override
 		public void onCreate(SQLiteDatabase db) {
-			db.execSQL("Create table "
-					+ FavoriteMetaData.Audio.TABLE_NAME
+			db.execSQL("Create table " + FavoriteMetaData.Audio.TABLE_NAME
 					+ "( _id INTEGER PRIMARY KEY AUTOINCREMENT, "
 					+ FavoriteMetaData.Audio.AUDIO_ID + " LONG UNIQUE);");
 		}
@@ -58,9 +59,8 @@ public class FavoriteContentProvider extends ContentProvider {
 		case FAVORITE_AUDIO_COLLECTION:
 		case FAVORITE_AUDIO_SINGLE:
 			mDatabase = mDatabaseHelper.getWritableDatabase();
-			int count = mDatabase.delete(
-					FavoriteMetaData.Audio.TABLE_NAME, selection,
-					selectionArgs);
+			int count = mDatabase.delete(FavoriteMetaData.Audio.TABLE_NAME,
+					selection, selectionArgs);
 			return count;
 		default:
 			throw new IllegalArgumentException("UnKnown URI" + uri);
@@ -86,8 +86,8 @@ public class FavoriteContentProvider extends ContentProvider {
 		case FAVORITE_AUDIO_SINGLE:
 			mDatabase = mDatabaseHelper.getWritableDatabase();
 			long rowId = mDatabase.insertWithOnConflict(
-					FavoriteMetaData.Audio.TABLE_NAME, "",
-					contentvalues, SQLiteDatabase.CONFLICT_REPLACE);
+					FavoriteMetaData.Audio.TABLE_NAME, "", contentvalues,
+					SQLiteDatabase.CONFLICT_REPLACE);
 			if (rowId > 0) {
 				Uri rowUri = ContentUris.withAppendedId(
 						FavoriteMetaData.Audio.CONTENT_URI, rowId);

@@ -8,10 +8,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.example.alex.crash.CrashDialog;
+
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.util.Log;
@@ -28,7 +33,7 @@ public class MainActivity extends ListActivity {
 	private static final String TAG = "MainActivity";
 	public static final String CATEGORY_ALEX = "com.example.category.alex";
 	private static final String EXTRA_PATH = "com.example.alex.MainActivity.EXTRA_PATH";
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()

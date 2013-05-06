@@ -16,23 +16,28 @@ public class CameraPreviewPixels extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		textView =  new TextView(this);
+		textView = new TextView(this);
 		setContentView(textView);
-		
-		Camera camera = Camera.open();
-		Parameters parameters = camera.getParameters();
-		List<Size> supportedPreviewSizes = parameters
-				.getSupportedPreviewSizes();
-		List<Size> supportedPictureSizes = parameters
-				.getSupportedPictureSizes();
-		showSizes(supportedPictureSizes, "supportedPictureSizes");
-		showSizes(supportedPreviewSizes, "supportedPreviewSizes");
+		int n = Camera.getNumberOfCameras();
+
+		for (int i = 0; i < n; i++) {
+			Camera camera = Camera.open(i);
+			Parameters parameters = camera.getParameters();
+			List<Size> supportedPreviewSizes = parameters
+					.getSupportedPreviewSizes();
+			List<Size> supportedPictureSizes = parameters
+					.getSupportedPictureSizes();
+			showSizes(supportedPictureSizes, "supportedPictureSizes");
+//			showSizes(supportedPreviewSizes, "supportedPreviewSizes");
+			camera.release();
+		}
 
 	}
 
-	private void showSizes(List<Size> sizes, String type){
-		for(Size size : sizes) {
-			textView.append(type + ": " + size.width + " x " + size.height + '\n');
+	private void showSizes(List<Size> sizes, String type) {
+		for (Size size : sizes) {
+			textView.append(type + ": " + size.width + " x " + size.height
+					+ '\n');
 		}
 	}
 }

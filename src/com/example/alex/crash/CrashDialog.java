@@ -2,35 +2,33 @@ package com.example.alex.crash;
 
 import com.example.alex.R;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.os.Bundle;
+import android.provider.ContactsContract.Contacts;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 
-public class CrashDialog extends DialogFragment {
-
-	public static CrashDialog getInstance(String log) {
-		CrashDialog crashDialog = new CrashDialog();
-		
-		Bundle args = new Bundle();
-		args.putString("log", log);
-		crashDialog.setArguments(args);
-
-		return crashDialog;
-	}
+public class CrashDialog extends Activity{
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		String log = getArguments().getString("log");
+		show(this);
 	}
-
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.crash_dialog, container, false);
-		return view;
+	public static void show(final Context context) {
+		Dialog dialog = new AlertDialog.Builder(context).setTitle("Crashed")
+				.setMessage("Your application has crashed again.")
+				.setPositiveButton(android.R.string.ok, null).create();
+		dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+		if (!dialog.isShowing()) {
+			dialog.show();
+		}
 	}
 
 }
