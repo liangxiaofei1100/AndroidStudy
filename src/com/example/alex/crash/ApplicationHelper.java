@@ -23,7 +23,6 @@
  */
 package com.example.alex.crash;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Application;
 import android.app.Application.ActivityLifecycleCallbacks;
@@ -60,7 +59,6 @@ public class ApplicationHelper {
         MainLifecycleDispatcher.get().registerActivityLifecycleCallbacks(callback);
     }
 
-    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     private static void postIcsRegisterActivityLifecycleCallbacks(Application application, ActivityLifecycleCallbacksCompat callback) {
         application.registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacksWrapper(callback));
     }
@@ -88,7 +86,6 @@ public class ApplicationHelper {
         MainLifecycleDispatcher.get().unregisterActivityLifecycleCallbacks(callback);
     }
 
-    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     private static void postIcsUnregisterActivityLifecycleCallbacks(Application application, ActivityLifecycleCallbacksCompat callback) {
         application.unregisterActivityLifecycleCallbacks(new ActivityLifecycleCallbacksWrapper(callback));
     }

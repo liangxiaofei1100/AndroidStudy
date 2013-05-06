@@ -53,7 +53,7 @@ public class ViewPagerDemo extends Activity {
 		mPageList.add(mPage3);
 		
 		// title list
-		mTitleList = new ArrayList<String>();// Ã¿¸öÒ³ÃæµÄTitleÊý¾Ý
+		mTitleList = new ArrayList<String>();// Ã¿ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Titleï¿½ï¿½ï¿½
 		mTitleList.add("page1");
 		mTitleList.add("page2");
 		mTitleList.add("page3");
