@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffcdcdcd" >
+
+    <ImageView
+        android:id="@+id/iv_rotation_fly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="21dp"
+        android:src="@android:drawable/sym_def_app_icon" />
+
+    <ImageView
+        android:id="@+id/iv_rotation_fly_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_launcher2" />
+
+    <LinearLayout
+        android:id="@+id/ll_rotation_fly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_rotation_fly"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

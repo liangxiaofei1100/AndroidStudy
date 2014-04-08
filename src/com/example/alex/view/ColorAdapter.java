@@ -1,6 +1,7 @@
 package com.example.alex.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -33,7 +34,6 @@ public class ColorAdapter extends BaseAdapter {
 	public View getView(int position, View cacheView, ViewGroup parent) {
 		LinearLayout.LayoutParams colorLayoutParams = new LinearLayout.LayoutParams(
 				400, 60);
-
 		LinearLayout colorLayout = new LinearLayout(mContext);
 		colorLayout.setBackgroundColor(mColors[position]);
 		colorLayout.setLayoutParams(colorLayoutParams);

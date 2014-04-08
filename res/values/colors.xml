@@ -11,4 +11,6 @@
 
     <color name="image_text_button_unselected">#999999</color>
     <color name="image_text_button_selected">#ffffff</color>
+    
+    <color name="transparent">#00000000</color>
 </resources>

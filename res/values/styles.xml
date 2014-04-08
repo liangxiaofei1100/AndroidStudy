@@ -14,4 +14,11 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="Theme.Transparent" parent="@style/AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
 </resources>

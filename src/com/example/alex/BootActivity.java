@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.os.BatteryManager;
 import android.os.Bundle;
 
 public class BootActivity extends Activity{

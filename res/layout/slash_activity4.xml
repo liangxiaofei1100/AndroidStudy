@@ -1,0 +1,15 @@
+<com.example.alex.activity.RightSlideLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_slash_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00ffff" >
+
+        
+    </RelativeLayout>
+
+</com.example.alex.activity.RightSlideLayout>

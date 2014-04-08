@@ -15,5 +15,17 @@
     <string name="crash_dialog_ok_toast">crash_dialog_ok_toast</string>
     <string name="searchLable">Alex search</string>
     <string name="locale_test">Locale test</string>
+    
+    <!-- article search -->
+    <string name="menu_article_new">New Article</string>
+    <string name="article_title">Title</string>
+    <string name="article_author">Author</string>
+    <string name="article_content">Content</string>
+    <string name="menu_article_delete">Delete</string>
+    <string name="menu_article_save">Save</string>
+    <string name="menu_article_search">Search</string>
+    <string name="searchLable_hint_article">Search article title author and content</string>
+    <string name="searchLable_label_article">Article</string>
+    <string name="searchLable_label_description">Article</string>
 
 </resources>

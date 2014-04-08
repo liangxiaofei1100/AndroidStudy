@@ -12,6 +12,7 @@ import com.example.alex.crash.CrashDialog;
 
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.R.integer;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;

@@ -5,28 +5,41 @@ import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.SearchRecentSuggestions;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.alex.R;
 
 public class SearchActivity extends Activity {
 
 	private String query;
+	private Button mButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.show_result);
 		handleIntent(getIntent());
+		
+		mButton = (Button)findViewById(R.id.btn_show_result);
+		mButton.setText("Start Search");
+		mButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				onSearchRequested();
+			}
+		});
 	}
 
 	@Override
 	public boolean onSearchRequested() {
-		// ´ò¿ª¸¡¶¯ËÑË÷¿ò£¨µÚÒ»¸ö²ÎÊýÄ¬ÈÏÌí¼Óµ½ËÑË÷¿òµÄÖµ£©
+		// ï¿½ò¿ª¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò£¨µï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
 		startSearch(null, false, null, false);
 		return true;
 	}
 
-	// µÃµ½ËÑË÷½á¹û
+	// ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@Override
 	public void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
@@ -35,14 +48,14 @@ public class SearchActivity extends Activity {
 
 	private void handleIntent(Intent intent) {
 		if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-			// »ñµÃËÑË÷¿òÀïÖµ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 			query = intent.getStringExtra(SearchManager.QUERY);
 			System.out.println(query);
-			// ±£´æËÑË÷¼ÇÂ¼
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼
 			SearchRecentSuggestions suggestions = new SearchRecentSuggestions(
 					this, RecentSearchProvider.AUTHORITY, RecentSearchProvider.MODE);
 			suggestions.saveRecentQuery(query, null);
-			System.out.println("±£´æ³É¹¦");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½É¹ï¿½");
 		}
 	}
 }
