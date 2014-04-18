@@ -420,17 +420,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <!--
-        <activity android:name="com.example.libapplication.MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        -->
-
         <activity
             android:name=".activity.TranslateActivity"
             android:theme="@style/ThemeActivity" >
@@ -676,6 +665,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".sdcard.SDCardReadPermissionTest" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".phone.PhoneStatus" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
