@@ -4,6 +4,7 @@ import com.example.alex.common.ShowResultActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Environment;
 import android.telephony.TelephonyManager;
 
 public class PhoneStatus extends ShowResultActivity {
