@@ -28,7 +28,7 @@ public class CameraPreviewPixels extends Activity {
 			List<Size> supportedPictureSizes = parameters
 					.getSupportedPictureSizes();
 			showSizes(supportedPictureSizes, "supportedPictureSizes");
-//			showSizes(supportedPreviewSizes, "supportedPreviewSizes");
+			showSizes(supportedPreviewSizes, "supportedPreviewSizes");
 			camera.release();
 		}
 
