@@ -8,16 +8,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.example.alex.crash.CrashDialog;
-
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.R.integer;
 import android.app.ListActivity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.util.Log;
@@ -25,6 +19,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 /**
  * browseIntent with package name equals this package name;<\br> list activities
@@ -32,8 +27,8 @@ import android.widget.SimpleAdapter;
  */
 public class MainActivity extends ListActivity {
 	private static final String TAG = "MainActivity";
-	public static final String CATEGORY_ALEX = "com.example.category.alex";
-	private static final String EXTRA_PATH = "com.example.alex.MainActivity.EXTRA_PATH";
+	/** Path is package name. For example"com.example.alex" */
+	public static final String EXTRA_PATH = "com.example.alex.MainActivity.EXTRA_PATH";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -55,14 +50,20 @@ public class MainActivity extends ListActivity {
 		getListView().setTextFilterEnabled(true);
 	}
 
+	/**
+	 * 
+	 * @param prefix
+	 *            Prefix is the path. see EXTRA_PATH.
+	 * @return
+	 */
 	protected List<Map<String, Object>> getData(String prefix) {
 		List<Map<String, Object>> myData = new ArrayList<Map<String, Object>>();
 
-		Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-		mainIntent.setPackage(getPackageName());
+		Intent queryIntent = new Intent();
+		queryIntent.setPackage(getPackageName());
 
 		PackageManager pm = getPackageManager();
-		List<ResolveInfo> list = pm.queryIntentActivities(mainIntent, 0);
+		List<ResolveInfo> list = pm.queryIntentActivities(queryIntent, 0);
 
 		if (null == list)
 			return myData;
@@ -150,7 +151,12 @@ public class MainActivity extends ListActivity {
 				.getItemAtPosition(position);
 
 		Intent intent = (Intent) map.get("intent");
-		startActivity(intent);
+		try {
+			startActivity(intent);
+		} catch (Exception e) {
+			Toast.makeText(this, "Activity not found. intent=" + intent,
+					Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	@Override

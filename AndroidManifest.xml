@@ -4,8 +4,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="15" />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
 
     <!-- 发送消息 -->
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -49,8 +49,6 @@
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -58,8 +56,6 @@
             android:label="LightSenorTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -67,8 +63,6 @@
             android:label="NativeCommunication" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -76,8 +70,6 @@
             android:label="RootTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -85,8 +77,6 @@
             android:label="ListViewSelector" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -94,8 +84,6 @@
             android:label="DeskClockTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -103,8 +91,6 @@
             android:label="APN Setting" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -112,8 +98,6 @@
             android:label="ContactActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -122,13 +106,10 @@
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="rtsp" />
@@ -140,8 +121,6 @@
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -149,8 +128,6 @@
             android:label="FilePickerActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -158,8 +135,6 @@
             android:label="InsertAudioIntoPlaylist" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -167,8 +142,6 @@
             android:label="ScanMusicActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -176,8 +149,6 @@
             android:label="ScanMusicActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -185,8 +156,6 @@
             android:label="DatabaseTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
@@ -199,29 +168,21 @@
             android:label="MulitiChoiceListViewActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".gps.GPSTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.FragmentMovement" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".db.profilesprovider.ProfilesProviderTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
@@ -232,22 +193,16 @@
         <activity android:name=".mms.MMSTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.DragViewActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".db.profilesprovider.AsyncQueryHandlerTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".widget.SimpleWidgetConfigActivity" >
@@ -270,8 +225,6 @@
         <activity android:name=".view.StackViewActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
@@ -288,50 +241,36 @@
         <activity android:name=".view.SurfaceViewTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".sensor.VibratorTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.ReboundActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".strictmode.StrictModeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.ListViewHeaderAndFooter" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.ListViewContextMemu" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.EditTextFilter" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
@@ -346,78 +285,56 @@
         <activity android:name=".view.LargeDataList" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.GestureTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.FragmentSwitch" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".db.UriTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.QuickContactBadgeDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".intent.ImageIntent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".intent.CameraIntent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".intent.VideoIntent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".mms.ConversationList" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".crash.CrashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".libapplication.LibActivityDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -425,8 +342,6 @@
             android:theme="@style/ThemeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -438,71 +353,51 @@
         <activity android:name=".webservice.WeatherServiceDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".mtkcontact.DialPanelNumberNotFound" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".camera.CameraPreviewPixels" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.ViewPagerDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.ViewPagerFragmentDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".camera.FaceDetectDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".camera.FaceDetectDemo2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".camera.FaceDetectDemo3" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".camera.FaceDetectDemo4" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".db.MultiQueryDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".crash.CrashDialog" />
@@ -510,8 +405,6 @@
         <activity android:name=".search.SearchActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -539,8 +432,6 @@
         <activity android:name=".locale.LocaleListenerDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -548,8 +439,6 @@
             android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -568,15 +457,11 @@
         <activity android:name=".wifi.WifiDirectServerDiscoryDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".animation.RotationFly" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -584,8 +469,6 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -593,15 +476,11 @@
             android:theme="@style/Theme.Transparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".activity.VelocityTrackerTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -609,8 +488,6 @@
             android:theme="@style/Theme.Transparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -618,113 +495,91 @@
             android:theme="@style/Theme.Transparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".activity.MemoryConsumer" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".game.SoundPoolDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".game.OpendGLESBeginning" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".view.EditTextAction" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".camera.UseSystemCamera" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".camera.QRCode" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".sdcard.SDCardReadPermissionTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".phone.PhoneStatus" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.alex.http.HttpGetPostActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.alex.activity.APKIcon" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.alex.http.HtmlView" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.alex.animation.PetalAnimate" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.alex.activity.HandlerTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.alex.game.ShouJiYanKuai" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name="com.example.alex.view.RingActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.alex.animation.ShowHideAnimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.alex.animation.ImageAnimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
     </application>

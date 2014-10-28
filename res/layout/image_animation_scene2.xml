@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1\n12\n123\n1234\n12345\n123456\n" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1\n12\n123\n1234\n12345\n123456\n" />
+
+            <ImageView
+                android:id="@+id/iv_lena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showAnimation"
+                android:src="@drawable/lena" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

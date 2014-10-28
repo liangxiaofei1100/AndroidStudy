@@ -8,9 +8,10 @@
     <color name="focused">#ffff44ff</color>
     <color name="normal">#ffffffff</color>
     <color name="diver">#ffcdcdcd</color>
-
     <color name="image_text_button_unselected">#999999</color>
     <color name="image_text_button_selected">#ffffff</color>
-    
     <color name="transparent">#00000000</color>
+    <color name="blue">#0000ff</color>
+    <color name="green">#00ff00</color>
+
 </resources>
