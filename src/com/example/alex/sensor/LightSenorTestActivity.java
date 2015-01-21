@@ -1,28 +1,29 @@
 package com.example.alex.sensor;
 
-import android.app.Activity;
+import com.example.alex.common.SimpleTestActivity;
+import com.example.alex.common.TimeUtil;
+
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
+import android.view.View;
 
-public class LightSenorTestActivity extends Activity implements
+public class LightSenorTestActivity extends SimpleTestActivity implements
 		SensorEventListener {
 	private static final String TAG = "LightSenorTestActivity";
 	private Sensor sensor;
-	private TextView mTextView;
 	private SensorManager sensorManager;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		mTextView = new TextView(this);
-		setContentView(mTextView);
+		mInputEditText.setVisibility(View.GONE);
+		mShowResultButton.setVisibility(View.GONE);
 
-		mTextView.setText("Light Senor Test:\n");
+		mResulTextView.setText("Light Senor Test\n");
 		sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 		sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
 	}
@@ -47,10 +48,9 @@ public class LightSenorTestActivity extends Activity implements
 
 	@Override
 	public void onSensorChanged(SensorEvent event) {
-		for (int i = 0; i < event.values.length; i++) {
-			mTextView.append("light senor value changed: value[" + i + "]: "
-					+ event.values[i]+"\n");
-		}
+		mResulTextView.append(TimeUtil.getCurrentTime() + " value:"
+				+ event.values[0] + "\n");
+		scrollToBottom();
 	}
 
 }

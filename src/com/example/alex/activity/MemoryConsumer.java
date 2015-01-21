@@ -2,39 +2,33 @@ package com.example.alex.activity;
 
 import java.util.ArrayList;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.alex.R;
+import com.example.alex.common.SimpleTestActivity;
 
-public class MemoryConsumer extends Activity {
+public class MemoryConsumer extends SimpleTestActivity {
 	private ArrayList<Bitmap> mBitmaps = new ArrayList<Bitmap>();
+	private int mCount = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.show_result);
-		final TextView textView = (TextView) findViewById(R.id.tv_show_result);
-		textView.setText("0");
-		Button button = (Button) findViewById(R.id.btn_show_result);
-		button.setOnClickListener(new OnClickListener() {
-			int n = 0;
+		mResulTextView.setText("Count=" + mCount);
+	}
 
-			@Override
-			public void onClick(View v) {
-				n++;
-				Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-						R.drawable.girls_generation);
-				mBitmaps.add(bitmap);
-				textView.setText(String.valueOf(n));
-			}
-		});
+	@Override
+	public void showResult(View view) {
+		super.showResult(view);
+		mCount++;
+		Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.girls_generation);
+		mBitmaps.add(bitmap);
+
+		mResulTextView.setText("Count=" + mCount);
 	}
 
 	@Override

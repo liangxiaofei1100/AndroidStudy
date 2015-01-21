@@ -19,7 +19,11 @@ public class VibratorTestActivity extends Activity {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		feedback.vibrate();
+		int action = event.getAction();
+		if (MotionEvent.ACTION_DOWN == action) {
+			feedback.vibrate();
+		}
+
 		return super.onTouchEvent(event);
 	}
 

@@ -1,6 +1,5 @@
 package com.example.alex.animation;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.transition.ChangeBounds;
@@ -11,10 +10,11 @@ import android.transition.TransitionManager;
 import android.transition.TransitionSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.alex.APILevel;
 import com.example.alex.R;
 
-@SuppressLint("NewApi")
 public class ImageAnimation extends Activity {
 
 	ViewGroup mSceneRootView;
@@ -27,6 +27,18 @@ public class ImageAnimation extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.image_animation);
 		mSceneRootView = (ViewGroup) findViewById(R.id.ll_scene_root);
+
+		int requiredAPILevel = 19;
+		boolean isAPIMatch = APILevel.isAPILevelMatch(requiredAPILevel);
+		if (!isAPIMatch) {
+			Toast.makeText(
+					this,
+					"API level mismatch. Current:"
+							+ APILevel.getCurrentAPILevel() + ", Required:"
+							+ requiredAPILevel, Toast.LENGTH_LONG).show();
+			finish();
+			return;
+		}
 
 		mScene1 = Scene.getSceneForLayout(mSceneRootView,
 				R.layout.image_animation_scene1, this);
@@ -53,7 +65,7 @@ public class ImageAnimation extends Activity {
 	private Transition getTransition() {
 		ChangeBounds changeBounds = new ChangeBounds();
 		changeBounds.setDuration(200);
-		
+
 		Fade fadeOut = new Fade(Fade.OUT);
 		fadeOut.setDuration(1000);
 		Fade fadeIn = new Fade(Fade.IN);

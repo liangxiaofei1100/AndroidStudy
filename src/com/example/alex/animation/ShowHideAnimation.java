@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 
 import com.example.alex.R;
 
+/**
+ * Failed.
+ * 
+ */
 public class ShowHideAnimation extends Activity {
 	private ViewGroup mContentView;
 	private View mView;

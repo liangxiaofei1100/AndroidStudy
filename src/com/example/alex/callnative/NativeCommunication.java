@@ -3,9 +3,7 @@ package com.example.alex.callnative;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,10 +13,7 @@ import java.io.PrintWriter;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -39,19 +34,11 @@ public class NativeCommunication extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.native_communication);
-		
-		
+
 		mContext = this;
 		mResultTextView = (TextView) findViewById(R.id.tv_result);
 		mCommandEditText = (EditText) findViewById(R.id.etv_command);
 		mCommitButton = (Button) findViewById(R.id.btn_commit);
-		File file = null;;
-		try {
-			file = File.createTempFile("CallRecord", ".amr", Environment.getExternalStorageDirectory());
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-		mResultTextView.setText(file.getAbsolutePath());
 		// try {
 		// String[] cmd = { "sh", "-c", "su /system/bin/load_mfg_8787.sh" };
 		// Process process = Runtime.getRuntime().exec(cmd);

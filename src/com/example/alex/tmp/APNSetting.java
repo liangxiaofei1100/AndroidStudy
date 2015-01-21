@@ -1,4 +1,4 @@
-package com.example.alex.apn;
+package com.example.alex.tmp;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,8 +13,6 @@ public class APNSetting extends Activity{
 		Intent intent = new Intent();
 		intent.setAction(Settings.ACTION_APN_SETTINGS);
 		startActivity(intent);
-		finish();
-		
 	}
 	
 }

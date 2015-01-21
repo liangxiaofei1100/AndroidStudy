@@ -5,7 +5,14 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="20" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <!-- 发送消息 -->
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -87,7 +94,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".apn.APNSetting"
+            android:name="com.example.alex.tmp.APNSetting"
             android:label="APN Setting" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -464,34 +471,20 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.SlashActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.SlashActivity2"
-            android:theme="@style/Theme.Transparent" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
         <activity android:name=".activity.VelocityTrackerTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.SlashActivity3"
+            android:name=".activity.SlashActivity1"
             android:theme="@style/Theme.Transparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.SlashActivity4"
+            android:name=".activity.SlashActivity2"
             android:theme="@style/Theme.Transparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -578,6 +571,21 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.alex.animation.ImageAnimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.alex.animation.keywordsflow.SearchFlyActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.alex.activity.SettingsActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.alex.activity.PackageFinder" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

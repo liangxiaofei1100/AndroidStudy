@@ -1,16 +1,17 @@
 package com.example.alex.animation;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
-import android.view.animation.Animation.AnimationListener;
 import android.widget.AbsoluteLayout;
 import android.widget.ImageView;
 
@@ -42,6 +43,7 @@ public class TransportAnimationView extends View {
 	 */
 	public void startTransportAnimation(ViewGroup containView, View endView,
 			ImageView... startViews) {
+		Log.d(TAG, "startTransportAnimation.start");
 		// Create new layout.
 		AbsoluteLayout absoluteLayout = new AbsoluteLayout(getContext());
 		LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT,
@@ -54,6 +56,7 @@ public class TransportAnimationView extends View {
 		int[] startViewPosition = new int[2];
 		int[] endViewPosition = new int[2];
 		boolean isTheLastAnimation = false;
+		Log.d(TAG, "startViews.length=" + startViews.length);
 		for (int i = 0; i < startViews.length; i++) {
 			ImageView startView = startViews[i];
 			ImageView shadowView = new ImageView(getContext());
@@ -68,11 +71,13 @@ public class TransportAnimationView extends View {
 			endView.getLocationInWindow(endViewPosition);
 			final int xDelta = endViewPosition[0] + endView.getWidth() / 2
 					- startViewPosition[0] - startView.getWidth() / 2;
-			final int yDelta = -500;
+			final int yDelta = endViewPosition[1] + endView.getHeight() / 2
+					- startViewPosition[1] - startView.getHeight() / 2;
 			isTheLastAnimation = (i == (startViews.length - 1));
 			startAnimation(shadowView, xDelta, yDelta, absoluteLayout,
 					containView, isTheLastAnimation);
 		}
+		Log.d(TAG, "startTransportAnimation.end");
 	}
 
 	/**

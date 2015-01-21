@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <header
+        android:id="@+id/wifi_settings"
+        android:fragment="com.example.alex.activity.SettingsActivity$Preference1"
+        android:title="Wireless Settings" />
+    <header
+        android:id="@+id/wifi_settings"
+        android:icon="@android:drawable/ic_delete"
+        android:summary="Enable and disable wifi."
+        android:title="Wi-Fi" />
+    <header
+        android:id="@+id/wifi_settings"
+        android:icon="@android:drawable/ic_delete"
+        android:title="Bluetooth" />
+
+</preference-headers>
