@@ -5,6 +5,7 @@ import com.example.alex.common.ShowResultActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Vibrator;
 import android.telephony.TelephonyManager;
 
 public class PhoneStatus extends ShowResultActivity {
@@ -15,6 +16,10 @@ public class PhoneStatus extends ShowResultActivity {
 		super.onCreate(savedInstanceState);
 		mTelephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 		showPhoneType();
+		
+		Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+		PhoneThroughMonitor monitor = new PhoneThroughMonitor(vibrator, mTelephonyManager);
+		new Thread(monitor).start();
 	}
 
 	private void showPhoneType() {
@@ -39,5 +44,8 @@ public class PhoneStatus extends ShowResultActivity {
 		}
 		mTextView.append("Phone Type = " + phoneTypeStr);
 	}
+	
+	
+	
 
 }

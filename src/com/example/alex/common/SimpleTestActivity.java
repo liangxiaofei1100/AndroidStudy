@@ -26,6 +26,7 @@ public class SimpleTestActivity extends Activity {
 
 		mInputEditText = (EditText) findViewById(R.id.et_input);
 		mResulTextView = (TextView) findViewById(R.id.tv_result);
+		mResulTextView.setText("");
 		mShowResultButton = (Button) findViewById(R.id.btn_show_result);
 		mScrollView = (ScrollView) findViewById(R.id.sv_result);
 		mContext = this;
