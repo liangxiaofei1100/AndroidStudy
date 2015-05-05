@@ -23,20 +23,17 @@ public class GestureTest extends Activity implements OnGestureListener {
 				.setOnDoubleTapListener(new GestureDetector.OnDoubleTapListener() {
 					public boolean onDoubleTap(MotionEvent e) {
 						viewA.setText("-" + "onDoubleTap" + "-");
-						// 双击时产生一次
 						Log.v("test", "onDoubleTap");
 						return false;
 					}
 
 					public boolean onDoubleTapEvent(MotionEvent e) {
-						// 双击时产生两次
 						Log.v("test", "onDoubleTapEvent");
 						return false;
 					}
 
 					public boolean onSingleTapConfirmed(MotionEvent e) {
 						viewA.setText("-" + "onSingleTapConfirmed" + "-");
-						// 短快的点击算一次单击
 						Log.v("test", "onSingleTapConfirmed");
 						return false;
 					}

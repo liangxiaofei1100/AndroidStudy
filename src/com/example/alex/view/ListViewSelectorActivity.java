@@ -27,7 +27,7 @@ public class ListViewSelectorActivity extends ListActivity {
 		initData();
 
 		final SimpleAdapter listItemAdapter = new SimpleAdapter(
-				ListViewSelectorActivity.this, listItem, R.layout.item,// ListItem的XML实现
+				ListViewSelectorActivity.this, listItem, R.layout.item,
 				new String[] { "more_image", "title", "date" }, new int[] {
 						R.id.more_image, R.id.title, R.id.date }) {
 		};
@@ -44,7 +44,7 @@ public class ListViewSelectorActivity extends ListActivity {
 
 		for (int i = 0; i < 3; i++) {
 			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("more_image", R.drawable.ic_launcher);// 图像资源的ID
+			map.put("more_image", R.drawable.ic_launcher);
 			map.put("title", title[i]);
 			map.put("date", date[i]);
 			listItem.add(map);

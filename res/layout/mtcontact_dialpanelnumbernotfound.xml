@@ -22,7 +22,6 @@
                 android:layout_marginRight="5dip"
                 android:layout_marginTop="10dip"
                 android:layout_weight="1"
-                android:background="@drawable/mtcontact_dialpanelnumbernotfound_background"
                 android:clickable="true" >
 
                 <ImageView
@@ -49,7 +48,6 @@
                 android:layout_marginRight="5dip"
                 android:layout_marginTop="10dip"
                 android:layout_weight="1"
-                android:background="@drawable/mtcontact_dialpanelnumbernotfound_background"
                 android:clickable="true" >
 
                 <ImageView
@@ -76,7 +74,6 @@
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
                 android:layout_weight="1"
-                android:background="@drawable/mtcontact_dialpanelnumbernotfound_background"
                 android:clickable="true" >
 
                 <ImageView

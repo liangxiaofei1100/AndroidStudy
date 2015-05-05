@@ -20,13 +20,9 @@ import android.widget.Toast;
 public class WeatherServiceDemo extends Activity {
 	private static final String LOG_TAG = "WeatherService";
 
-	// Ãû¿Õ¼ä
 	private static final String NAMESPACE = "http://WebXml.com.cn/";
-	// ÍøÖ·
 	private static String URL = "http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx";
-	// ·½·¨Ãû
 	private static final String METHOD_NAME = "getRegionCountry";
-	// SOAPACTION
 	private static String SOAP_ACTION = "http://WebXml.com.cn/getRegionCountry";
 
 	private String weatherToday;
@@ -71,11 +67,11 @@ public class WeatherServiceDemo extends Activity {
 
 			public void run() {
 				mHandler.sendEmptyMessage(MSG_GET_WEATHER_START);
-				getWeather("ÉÏº£");
+				getWeather("ï¿½Ïºï¿½");
 				mHandler.sendEmptyMessage(MSG_GET_WEATHER_FINISH);
 			}
 		};
-		
+
 		thread.start();
 	}
 
@@ -114,11 +110,12 @@ public class WeatherServiceDemo extends Activity {
 	private void parseWeather(SoapObject detail)
 			throws UnsupportedEncodingException {
 		String date = detail.getProperty(6).toString();
-		weatherToday = "½ñÌì£º" + date.split(" ")[0];
-		weatherToday = weatherToday + " ÌìÆø£º" + date.split(" ")[1];
-		weatherToday = weatherToday + " ÆøÎÂ£º" + detail.getProperty(5).toString();
-		weatherToday = weatherToday + " ·çÁ¦£º" + detail.getProperty(7).toString()
-				+ " ";
+		weatherToday = "ï¿½ï¿½ï¿½ì£º" + date.split(" ")[0];
+		weatherToday = weatherToday + " ï¿½ï¿½ï¿½ï¿½" + date.split(" ")[1];
+		weatherToday = weatherToday + " ï¿½ï¿½ï¿½Â£ï¿½"
+				+ detail.getProperty(5).toString();
+		weatherToday = weatherToday + " ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+				+ detail.getProperty(7).toString() + " ";
 		Log.d(LOG_TAG, TimeUtil.getCurrentTime() + ": weatherToday is "
 				+ weatherToday);
 	}
