@@ -1,3 +1,5 @@
+import com.android.builder.core.DefaultManifestParser
+
 buildscript {
     repositories {
         mavenCentral()
@@ -5,8 +7,12 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.2.2'
     }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
 }
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
@@ -15,6 +21,14 @@ dependencies {
 android {
     compileSdkVersion 20
     buildToolsVersion "22.0.1"
+
+    // 设置编译的版本号，目前使用manifes中的定义
+//    defaultConfig {
+//        minSdkVersion 14
+//        targetSdkVersion 20
+//        versionCode 111
+//        versionName "1.1.1"
+//    }
 
     sourceSets {
         main {
@@ -39,8 +53,51 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
-    
+
     lintOptions {
-         abortOnError false
+        abortOnError false
     }
+
+    // 签名配置
+    signingConfigs {
+        release {
+            storeFile file("keystore/android_liangxiaofei.key")
+            storePassword "1234567"
+            keyAlias "123"
+            keyPassword "1234567"
+        }
+        debug {
+            storeFile file("keystore/android_liangxiaofei.key")
+            storePassword "1234567"
+            keyAlias "123"
+            keyPassword "1234567"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            // proguard的开关
+            minifyEnabled true
+            // minifyEnabled和shrinkResources一同使用，用于去除没有使用的资源
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            // proguard的开关
+            minifyEnabled false
+            // minifyEnabled和shrinkResources一同使用，用于去除没有使用的资源
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+/**
+ * 从Manifest.xml中读取版本号
+ */
+def readVersion() {
+    def manifestParser = new DefaultManifestParser()
+    return manifestParser.getVersionName(android.sourceSets.main.manifest.srcFile);
 }

@@ -67,8 +67,8 @@ public class DragView extends View {
 		mImageView = (ImageView) createNewView();
 		mImageView.setOnTouchListener(new TouchListener());
 		layoutParams.gravity = Gravity.LEFT | Gravity.TOP;
-		layoutParams.x = location[0] + 30; // Æ«ÒÆÁ¿x
-		layoutParams.y = location[1]; // Æ«ÒÆÁ¿y
+		layoutParams.x = location[0] + 30;
+		layoutParams.y = location[1];
 		layoutParams.width = 40;
 		layoutParams.height = 40;
 		layoutParams.alpha = 1.0f;

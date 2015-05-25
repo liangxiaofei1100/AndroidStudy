@@ -27,5 +27,7 @@
     <string name="searchLable_hint_article">Search article title author and content</string>
     <string name="searchLable_label_article">Article</string>
     <string name="searchLable_label_description">Article</string>
+    <string name="title_activity_set_system_animation">SetSystemAnimation</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

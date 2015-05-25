@@ -6,7 +6,7 @@ package com.example.alex.common;
  */
 public class Log {
     private static final String TAG = "Alex/";
-    private static final boolean isDebug = true;
+    public static final boolean isDebug = true;
 
     public static void v(String tag, String message) {
         if (isDebug) {

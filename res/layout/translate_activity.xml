@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:alex="http://schemas.android.com/apk/res/com.example.alex"
+    xmlns:alex="http://schemas.android.com/apk/res-auto"
     android:id="@+id/relative_layout_translate_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
