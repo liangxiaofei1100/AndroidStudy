@@ -1,7 +1,5 @@
 package com.example.alex.common;
 
-import com.gavin.memedia.AppApplication;
-
 /**
  * 方便控制Log开关
  */
@@ -88,6 +86,10 @@ public class Log {
         android.util.Log.e(APP_LOG_TAG + tag, message);
     }
 
+    public static void e(Exception e) {
+        printStackTrace(e);
+    }
+
     /**
      * 获取调用的类名和方法名。
      *
@@ -106,5 +108,24 @@ public class Log {
         } catch (Exception e) {
         }
         return caller;
+    }
+
+    public static void printStackTrace() {
+        StackTraceElement[] traceElements = Thread.currentThread()
+                .getStackTrace();
+        if (traceElements != null) {
+            for (int i = 0; i < traceElements.length; i++) {
+                Log.d("", traceElements[i].toString());
+            }
+        }
+    }
+
+    public static void printStackTrace(Exception e) {
+        StackTraceElement[] traceElements = e.getStackTrace();
+        if (traceElements != null) {
+            for (int i = 0; i < traceElements.length; i++) {
+                Log.e("", traceElements[i].toString());
+            }
+        }
     }
 }

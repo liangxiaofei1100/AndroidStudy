@@ -3,7 +3,7 @@
     package="com.example.alex"
     android:sharedUserId="com.alex"
     android:versionCode="11"
-    android:versionName="1.1">
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -53,14 +53,14 @@
         android:name=".CrashHandleApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.example">
+        android:theme="@style/Theme.example" >
         <meta-data
             android:name="CHANEL"
             android:value="9999" />
 
         <activity
             android:name=".BootActivity"
-            android:label="@string/title_activity_main">
+            android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -69,61 +69,61 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main">
+            android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".about.About">
+        <activity android:name=".about.About" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".sensor.LightSenorTestActivity"
-            android:label="LightSenorTestActivity">
+            android:label="LightSenorTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".callnative.NativeCommunication"
-            android:label="NativeCommunication">
+            android:label="NativeCommunication" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".root.RootTest"
-            android:label="RootTest">
+            android:label="RootTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".view.ListViewSelectorActivity"
-            android:label="ListViewSelector">
+            android:label="ListViewSelector" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".deskclock.DeskClockTest"
-            android:label="DeskClockTest">
+            android:label="DeskClockTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".tmp.APNSetting"
-            android:label="APN Setting">
+            android:label="APN Setting" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".contact.ContactActivity"
-            android:label="ContactActivity">
+            android:label="ContactActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -131,7 +131,7 @@
         <activity
             android:name=".media.VideoPlayerActivity"
             android:label="VideoPlayerActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -146,42 +146,42 @@
         <activity
             android:name=".media.VideoPlayerActivity2"
             android:label="VideoPlayerActivity2"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".media.FilePickerActivity"
-            android:label="FilePickerActivity">
+            android:label="FilePickerActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".media.InsertAudioIntoPlaylist"
-            android:label="InsertAudioIntoPlaylist">
+            android:label="InsertAudioIntoPlaylist" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".media.ScanMusicActivity"
-            android:label="ScanMusicActivity">
+            android:label="ScanMusicActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".media.MusicPickerActivity"
-            android:label="ScanMusicActivity">
+            android:label="ScanMusicActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".db.DatabaseTest"
-            android:label="DatabaseTest">
+            android:label="DatabaseTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -193,22 +193,22 @@
 
         <activity
             android:name=".view.MulitiChoiceListViewActivity"
-            android:label="MulitiChoiceListViewActivity">
+            android:label="MulitiChoiceListViewActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".gps.GPSTestActivity">
+        <activity android:name=".gps.GPSTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.FragmentMovement">
+        <activity android:name=".view.FragmentMovement" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".db.profilesprovider.ProfilesProviderTest">
+        <activity android:name=".db.profilesprovider.ProfilesProviderTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -218,28 +218,28 @@
             android:name=".db.profilesprovider.ProfilesProvider"
             android:authorities="com.example.alex.db.profilesprovider" />
 
-        <activity android:name=".mms.MMSTestActivity">
+        <activity android:name=".mms.MMSTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.DragViewActivity">
+        <activity android:name=".view.DragViewActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".db.profilesprovider.AsyncQueryHandlerTest">
+        <activity android:name=".db.profilesprovider.AsyncQueryHandlerTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".widget.SimpleWidgetConfigActivity">
+        <activity android:name=".widget.SimpleWidgetConfigActivity" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
 
-        <receiver android:name=".widget.SimpleWidgetProvider">
+        <receiver android:name=".widget.SimpleWidgetProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -250,13 +250,13 @@
         </receiver>
 
         <activity android:name=".widget.SimpleWidgetTestActivity" />
-        <activity android:name=".view.StackViewActivity">
+        <activity android:name=".view.StackViewActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <receiver android:name=".widget.StackViewWidgetProvider">
+        <receiver android:name=".widget.StackViewWidgetProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -266,37 +266,37 @@
                 android:resource="@xml/stackview_appwidget_info" />
         </receiver>
 
-        <activity android:name=".view.SurfaceViewTestActivity">
+        <activity android:name=".view.SurfaceViewTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".sensor.VibratorTestActivity">
+        <activity android:name=".sensor.VibratorTestActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ReboundActivity">
+        <activity android:name=".view.ReboundActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".strictmode.StrictModeActivity">
+        <activity android:name=".strictmode.StrictModeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ListViewHeaderAndFooter">
+        <activity android:name=".view.ListViewHeaderAndFooter" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ListViewContextMemu">
+        <activity android:name=".view.ListViewContextMemu" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.EditTextFilter">
+        <activity android:name=".view.EditTextFilter" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -304,70 +304,70 @@
 
         <receiver android:name=".mms.MMSMessageSentReceiver" />
         <receiver android:name=".mms.MMSMessageDeliveryReceiver" />
-        <receiver android:name=".mms.SMSReceiver">
+        <receiver android:name=".mms.SMSReceiver" >
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".view.LargeDataList">
+        <activity android:name=".view.LargeDataList" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.GestureTest">
+        <activity android:name=".view.GestureTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.FragmentSwitch">
+        <activity android:name=".view.FragmentSwitch" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".db.UriTest">
+        <activity android:name=".db.UriTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.QuickContactBadgeDemo">
+        <activity android:name=".view.QuickContactBadgeDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".intent.ImageIntent">
+        <activity android:name=".intent.ImageIntent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".intent.CameraIntent">
+        <activity android:name=".intent.CameraIntent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".intent.VideoIntent">
+        <activity android:name=".intent.VideoIntent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".mms.ConversationList">
+        <activity android:name=".mms.ConversationList" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".crash.CrashActivity">
+        <activity android:name=".crash.CrashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".libapplication.LibActivityDemo">
+        <activity android:name=".libapplication.LibActivityDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.TranslateActivity"
-            android:theme="@style/ThemeActivity">
+            android:theme="@style/ThemeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -378,53 +378,53 @@
         <activity
             android:name=".activity.TranslateActivity3"
             android:theme="@style/ThemeActivity" />
-        <activity android:name=".mtkcontact.DialPanelNumberNotFound">
+        <activity android:name=".mtkcontact.DialPanelNumberNotFound" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".camera.CameraPreviewPixels">
+        <activity android:name=".camera.CameraPreviewPixels" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ViewPagerDemo">
+        <activity android:name=".view.ViewPagerDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ViewPagerFragmentDemo">
+        <activity android:name=".view.ViewPagerFragmentDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".camera.FaceDetectDemo">
+        <activity android:name=".camera.FaceDetectDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".camera.FaceDetectDemo2">
+        <activity android:name=".camera.FaceDetectDemo2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".camera.FaceDetectDemo3">
+        <activity android:name=".camera.FaceDetectDemo3" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".camera.FaceDetectDemo4">
+        <activity android:name=".camera.FaceDetectDemo4" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".db.MultiQueryDemo">
+        <activity android:name=".db.MultiQueryDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity android:name=".crash.CrashDialog" />
-        <activity android:name=".search.SearchActivity">
+        <activity android:name=".search.SearchActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -442,22 +442,23 @@
 
         <provider
             android:name=".search.RecentSearchProvider"
-            android:authorities="com.example.alex.search.RecentSearchProvider"></provider>
+            android:authorities="com.example.alex.search.RecentSearchProvider" >
+        </provider>
 
-        <receiver android:name=".locale.LocaleResourceUpdater">
+        <receiver android:name=".locale.LocaleResourceUpdater" >
             <intent-filter>
                 <action android:name="com.android.locale.LocaleResourceUpdater.ACTION_UPDATE_CONTENT_REQUEST" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".locale.LocaleListenerDemo">
+        <activity android:name=".locale.LocaleListenerDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".search.ArticleListActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -475,196 +476,216 @@
             android:name=".search.ArticleProvider"
             android:authorities="com.example.alex.search.article" />
 
-        <activity android:name=".wifi.WifiDirectServerDiscoryDemo">
+        <activity android:name=".wifi.WifiDirectServerDiscoryDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".animation.RotationFly">
+        <activity android:name=".animation.RotationFly" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.VelocityTrackerTest">
+        <activity android:name=".activity.VelocityTrackerTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.SlashActivity1"
-            android:theme="@style/Theme.Transparent">
+            android:theme="@style/Theme.Transparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.SlashActivity2"
-            android:theme="@style/Theme.Transparent">
+            android:theme="@style/Theme.Transparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MemoryConsumer">
+        <activity android:name=".activity.MemoryConsumer" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".game.SoundPoolDemo">
+        <activity android:name=".game.SoundPoolDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".game.OpendGLESBeginning">
+        <activity android:name=".game.OpendGLESBeginning" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.EditTextAction">
+        <activity android:name=".view.EditTextAction" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".camera.UseSystemCamera">
+        <activity android:name=".camera.UseSystemCamera" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".sdcard.SDCardReadPermissionTest">
+        <activity android:name=".sdcard.SDCardReadPermissionTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".phone.PhoneStatus">
+        <activity android:name=".phone.PhoneStatus" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".http.HttpGetPostActivity">
+        <activity android:name=".http.HttpGetPostActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.APKIcon">
+        <activity android:name=".activity.APKIcon" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".http.HtmlView">
+        <activity android:name=".http.HtmlView" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".animation.PetalAnimate">
+        <activity android:name=".animation.PetalAnimate" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.HandlerTest">
+        <activity android:name=".activity.HandlerTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".game.ShouJiYanKuai">
+        <activity android:name=".game.ShouJiYanKuai" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.RingActivity">
+        <activity android:name=".view.RingActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".animation.ShowHideAnimation">
+        <activity android:name=".animation.ShowHideAnimation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".animation.ImageAnimation">
+        <activity android:name=".animation.ImageAnimation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".animation.keywordsflow.SearchFlyActivity">
+        <activity android:name=".animation.keywordsflow.SearchFlyActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SettingsActivity">
+        <activity android:name=".activity.SettingsActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PackageFinder">
+        <activity android:name=".activity.PackageFinder" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.SystemInfo">
+        <activity android:name=".tmp.SystemInfo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.SystemProperties">
+        <activity android:name=".tmp.SystemProperties" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.Deamon">
+        <activity android:name=".tmp.Deamon" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.EnableDisabledApp">
+        <activity android:name=".tmp.EnableDisabledApp" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.ForeceStopPackage">
+        <activity android:name=".tmp.ForeceStopPackage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.ScreenShotActivity">
+        <activity android:name=".tmp.ScreenShotActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.LauncherIconHide">
+        <activity android:name=".tmp.LauncherIconHide" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <receiver android:name=".tmp.SreenReceiver">
+        <receiver android:name=".tmp.SreenReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.SCREEN_OFF" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".tmp.CallReceiver">
-            <intent-filter android:priority="1000">
+        <receiver android:name=".tmp.CallReceiver" >
+            <intent-filter android:priority="1000" >
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".tmp.BootReciever">
-            <intent-filter android:priority="1000">
+        <receiver android:name=".tmp.BootReciever" >
+            <intent-filter android:priority="1000" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".contact.CallLogTest">
+        <activity android:name=".contact.CallLogTest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.IMEITest">
+        <activity android:name=".tmp.IMEITest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".tmp.SetSystemAnimation">
+        <activity android:name=".tmp.SetSystemAnimation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".tmp.MeMediaTest" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".media.MediaFileTest" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".tmp.ApkFileParser" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".http.HttpDownload2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
